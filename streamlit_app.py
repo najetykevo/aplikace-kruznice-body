@@ -1,8 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
-from io import BytesIO
-from fpdf import FPDF
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas 
+
 
 st.set_page_config(page_title="Body na kružnici", layout="wide")
 
@@ -75,3 +76,4 @@ st.download_button(
     file_name="kruzice.pdf",
     mime="application/pdf"
 )
+
